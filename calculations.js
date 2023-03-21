@@ -8,5 +8,5 @@ function average()
 }
 function go()
 {
-    average;
+    average();
 }
