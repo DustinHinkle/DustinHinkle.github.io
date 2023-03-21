@@ -1,13 +1,50 @@
-<form>
-    <label for="highOne">Highest Earning Year:</label><br>
-    <input type="text" id="highOne" name="highOne"><br>
-    <label for="highTwo">Second Highest Earning Year:</label><br>
-    <input type="text" id="highTwo" name="highTwo"><br>
-    <label for="highThree">Third Highest Earning Year:</label><br>
-    <input type="text" id="highThree" name="highThree">
-</form>
-<p>Your 3 year high average is: <p id="average"></p></p>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="StyleSheet.css">
+        <title>FERS Calculator</title>
+    </head>
+    <body>
+        <script src="calculations.js"></script>
+        
+        <h2>Federal Employees Retirement System Calculator</h2>
+        <p>This is a calculator made to estimate the annuity a federal employee will receive.</p>
+        
+        <form>
+            <label for="highOne">Highest Earning Year:</label><br>
+            <input type="number" id="highOne" name="highOne" min="1"><br>
 
-<button onclick="go()">Submit!</button>
+            <label for="highTwo">Second Highest Earning Year:</label><br>
+            <input type="number" id="highTwo" name="highTwo" min="1"><br>
+
+            <label for="highThree">Third Highest Earning Year:</label><br>
+            <input type="number" id="highThree" name="highThree" min="1"><br>
+        
+            <label for="yos">Federal Years of Service:</label><br>
+            <input type="number" id="yos" name="yos" min="0"><br>
+
+            <label for="age">Your age at this time:</label><br>
+            <input type="number" id="age" name="age" min="0"><br>
+
+            <label for="months">Months until 62, enter 0 if 62+:</label><br>
+            <input type="number" id="months" name="months" min="0"><br>
+            
+        </form> 
+        
+        <div class="center"><button onclick="go()">Submit!</button></div>
+
+        <div id="hidden" style="display:none">
+        <p id="average"></p>
+        <p id="rate"></p>
+        <p id="reduction"></p>
+        <p id="final"></p>
+        </div>
+        
+    </body>
+</html>
+
+
+
+
 
 
