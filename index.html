@@ -6,46 +6,54 @@
     </head>
     <body>
         <script src="calculations.js"></script>
-        
-        <h2>Federal Employees Retirement System Calculator</h2>
-        <p>This is a calculator made to estimate the annuity a federal employee will receive.</p>
-        
-        <form>
-            <label for="highOne">Highest Earning Year:</label><br>
-            <input type="number" id="highOne" name="highOne" min="1"><br>
+        <div class="parent">
+            <div class="div2"> 
+                <h2>Federal Employees Retirement System Calculator</h2>
+                <p>This is a calculator made to estimate the Non-disability annuity benefits a federal employee will receive.</p>
+            </div> 
+        <div class="div1">
+            <p>Special Provision Employees: Air Traffic Controllers, Firefighters, Law Enforcement Officers, Capitol Police, Supreme Court Police, or Nuclear Materials Couriers which is calculated differently than a normal federal employee.<br><br> For more information visit: <a href="https://www.opm.gov/retirement-center/fers-information/computation/">https://www.opm.gov/retirement-center/fers-information/computation/</a></p>
+        </div> 
+        <div class="div3">
+            <form>
+                <label for="highOne">Highest Earning Year:</label><br>
+                <input type="number" id="highOne" name="highOne" min="1"><br>
 
-            <label for="highTwo">Second Highest Earning Year:</label><br>
-            <input type="number" id="highTwo" name="highTwo" min="1"><br>
+                <label for="highTwo">Second Highest Earning Year:</label><br>
+                <input type="number" id="highTwo" name="highTwo" min="1"><br>
 
-            <label for="highThree">Third Highest Earning Year:</label><br>
-            <input type="number" id="highThree" name="highThree" min="1"><br>
-        
-            <label for="yos">Federal Years of Service:</label><br>
-            <input type="number" id="yos" name="yos" min="0"><br>
-
-            <label for="age">Your age at the time of drawing retirement benefits:</label><br>
-            <input type="number" id="age" name="age" min="0"><br>
-
-            <label for="months">Months until 62, enter 0 if 62+:</label><br>
-            <input type="number" id="months" name="months" min="0" value="0"><br>
-
+                <label for="highThree">Third Highest Earning Year:</label><br>
+                <input type="number" id="highThree" name="highThree" min="1"><br>
             
-            <input type="radio" id="normal" name="empType" value="normal" checked="checked">
-            <label for="html">Normal Employee</label><br>
-            <input type="radio" id="spe" name="empType" value="special">
-            <label for="spe">Special Provision Employee</label><br>
-            
-        </form> 
-        
-        <div class="center"><button onclick="go()">Submit!</button></div>
+                <label for="yos">Federal Years of Service:</label><br>
+                <input type="number" id="yos" name="yos" min="0"><br>
 
-        <div id="hidden" style="display:none">
-        <p id="average"></p>
-        <p id="rate"></p>
-        <p id="reduction"></p>
-        <p id="final"></p>
+                <label for="age">Your age at the time of drawing retirement benefits:</label><br>
+                <input type="number" id="age" name="age" min="0"><br>
+
+                <label for="months">Months until 62, enter 0 if 62+:</label><br>
+                <input type="number" id="months" name="months" min="0" value="0"><br>
+
+                
+                <input type="radio" id="normal" name="empType" value="normal" checked="checked">
+                <label for="html">Normal Employee</label><br>
+                <input type="radio" id="spe" name="empType" value="special">
+                <label for="spe">Special Provision Employee</label><br>
+                
+            </form>
+        
+            <div class="center">
+                <button onclick="go()">Submit!</button>
+            </div>
         </div>
-        
+        <div class="div4"> 
+            <div id="hidden" style="display:none">
+                <p id="average"></p>
+                <p id="rate"></p>
+                <p id="reduction"></p>
+                <p id="final"></p>
+            </div>
+        </div> 
     </body>
 </html>
 
